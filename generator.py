@@ -18,7 +18,8 @@ def statement_generator(triple, action):
     s = triple[0]
     p = triple[1]
     o = triple[2]
-    index = randint(0, 9)
+    #index = randint(0, 9)
+    index = 0
     sentence = template[s.Class][p][action][index]
     sentence = sentence.replace('(S)', s.Name).replace('(O)', o.Name).replace('(P)', p)
     
@@ -26,6 +27,6 @@ def statement_generator(triple, action):
 
 if __name__ == "__main__":
     S = Entity('카이스트', 'University')
-    P = 'Country'
+    P = 'country'
     O = Entity('대한민국', 'Country')
     print(statement_generator([S, P, O], 'questions'))
