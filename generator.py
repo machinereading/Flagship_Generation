@@ -25,4 +25,7 @@ def statement_generator(triple, action):
     return sentence
 
 if __name__ == "__main__":
-    pass
+    S = Entity('카이스트', 'University')
+    P = 'Country'
+    O = Entity('대한민국', 'Country')
+    print(statement_generator([S, P, O], 'questions'))
