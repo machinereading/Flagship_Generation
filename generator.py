@@ -14,7 +14,7 @@ class Entity:
 triple : [s:Entity, p:String, o:Entity]
 '''
 def statement_generator(triple, action):
-    template = json.load(open('modified_template.json', 'r', encoding='utf-8'))
+    template = json.load(open('temp.json', 'r', encoding='utf-8'))
     s = triple[0]
     p = triple[1]
     o = triple[2]
